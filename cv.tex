@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Mohamed \textsc{Hashi}
+	}\bigskip\par}
+
+
+
+\section{Persoonsgegevens}
+
+\begin{tabular}{rl}
+    \textsc{Volledige naam:} & Mohamed Abdallah Hashi\\
+    \textsc{Geboortedatum:} & 5 September 1989 \\
+    \textsc{Geboorteplaats:} & Mogadishu, Somali\"e  \\
+    \textsc{Nationaliteiten:} & Nederlands, Somalisch \\
+    \textsc{Adres:}   & Sophiastraat 5 3314 ZV Dordrecht\\
+    \textsc{Telefoonnummer:}     & 0610145847\\
+    \textsc{E-mail:}     & \href{mailto:maxamedhashi@gmail.com}{maxamedhashi@gmail.com}
+\end{tabular}
+
+
+\section{Arbeidsverleden}
+\begin{tabular}{r|p{11cm}}
+ \textsc{Jan 2015} & \textsc{RiskCo} B.V. te Utrecht \\
+ \textsc{Juli 2013}& Software Developer\\
+ \multicolumn{2}{c}{} \\
+\textsc{Jan 2013} & Departement Wiskunde, Universiteit Utrecht \\
+\textsc{Nov 2012} & Onderwijsassistent\\
+ \multicolumn{2}{c}{} \\
+ \textsc{Mei 2010} & Regionale Organisatie voor Hulp en Ondersteuning, ROHO \\
+\textsc{Maart 2010} & Bijlescoach\\
+ \multicolumn{2}{c}{} \\
+ \textsc{Mei 2008} & Freelance \\
+\textsc{Januari 2007} & Priv\'e leraar Wiskunde\\
+ \multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Opleidingen}
+\begin{tabular}{rl}	
+Expected \textsc{November} 2015 & Master of Science in \textsc{Mathematics}\\
+& Universiteit Leiden\\
+\textsc{Juli} 2014& Bachelor Wiskunde \\
+& Universiteit Utrecht \\
+\textsc{Juli} 2008 & Gymnasium, profiel NT\\
+& Johan de Witt Gymnasium, Dordrecht\\
+\end{tabular}
+
+%Section: Languages
+\section{Talen}
+\begin{tabular}{rl}
+ \textsc{Nederlands:}& Moedertaal\\
+\textsc{Somalisch:}& Redelijk verbaal\\
+\textsc{Engels:}& Goed verbaal en uitstekend in geschrift\\
+\end{tabular}
+
+\end{document}

@@ -1,0 +1,134 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Mohamed \textsc{Hashi}
+	}\bigskip \includegraphics[scale=0.075]{RiskCo16.jpg}
+	\par}
+
+
+
+\section{Personal Information}
+
+\begin{tabular}{rl}
+ \multicolumn{2}{c}{} \\
+\textsc{Jan 2013} & Department Mathematics, Universiteit Utrecht \\
+\textsc{Nov 2012} & Teaching Assistant\\
+    \textsc{Full name:} & Mohamed Abdallah Hashi\\
+    % \textsc{Date of birth:} & 5 September 1989 \\
+    % \textsc{Nationality:} & Dutch, Somali \\
+    % \textsc{Address:}   & Sophiastraat 5 3314 ZV Dordrecht, The Netherlands\\
+    \textsc{Telephone:}     & 0031 - 610145847, 0049 - 17634318241\\
+    \textsc{E-mail:}     & \href{mailto:maxamedhashi@gmail.com}{maxamedhashi@gmail.com}
+\end{tabular}
+
+
+\section{Working Experience}
+\begin{tabular}{r|p{11cm}}
+\textsc{Now} & Spreadshirt, Leipzig \\
+\textsc{February 2017} & Software Engineer\\
+& Tasks:\\
+& Improve architecture of QA code to help QA engineers.\\
+& Implement new image rendering features.\\
+& Support other engineers in team technically.\\
+
+ \multicolumn{2}{c}{} \\
+\textsc{Now} & Spreadshirt, Leipzig \\
+\textsc{Nov 2016} & Front-end Developer\\
+\\
+& Tasks:\\
+& Maintain in-house developed JavaScript framework.\\
+& Develop and maintain single-page-apps.\\
+ \multicolumn{2}{c}{} \\
+ \textsc{May 2016} & \href{http://www.riskco.nl/}{\textsc{RiskCo} B.V.}, Utrecht \\
+ \textsc{July 2013}& General Programmer\\
+\\
+& Tasks:\\
+& Write scripts to automate business processes.\\
+& Analyse big data sets provided in raw format.\\
+& Build front-end in ExtJS as part of a scrum team.\\
+& Write object-mapper for pension products in NL.\\
+& Write automated testing framework.\\
+& Write XSLT framework \\
+ \multicolumn{2}{c}{} \\
+\textsc{Jan 2013} & Department Mathematics, Universiteit Utrecht \\
+\textsc{Nov 2012} & Teaching Assistant\\
+\end{tabular}
+
+%Section: Education
+
+\section{Education}
+\begin{tabular}{rl}	
+\textsc{July} 2016 & Master Mathematics\\
+& Universiteit Leiden\\
+\textsc{July} 2013& Bachelor Computer Science \\
+& Universiteit Utrecht \\
+\textsc{July} 2013& Bachelor Mathematics \\
+& Universiteit Utrecht \\
+\end{tabular}
+
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{Dutch:}& Native\\
+\textsc{English:}& Full professional proficiency\\
+\textsc{German:}& Limited working proficiency\\
+\end{tabular}
+
+\section{Skills}
+Java, C\#, Python, ExtJS, PHP, Javascript, XSLT, XML,  OOP,
+Haskell, SQL, CouchDB, Unity, LaTeX, Linux, Python, Typescript, SVG.
+
+\section{Interests}
+Hiking, gaming, football and reading.
+
+\end{document}
